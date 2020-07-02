@@ -35,7 +35,7 @@ let tester = new Employees('Ria Turner', 'ria25@gmail.com', 'Tester');
 let manager = new Manager('Smith Paul', 'paul25@gmail.com', 'Manager');
 
 let emps = [developer, tester, manager];
-manager.removeEmployee(tester);
+manager.removeEmployee(developer);
 
 console.log(emps);
 //console.log(tester);
