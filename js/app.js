@@ -23,18 +23,22 @@ class Employees {
 
 class Manager extends Employees {
 	removeEmployee(emp) {
-		emps = emps.filter();
+		emps = emps.filter((e) => {
+			return e.name != emp.name;
+		});
 	}
 }
 
 // create new object
 let developer = new Employees('Andre', 'andre@gmail.com', 'Developer');
 let tester = new Employees('Ria Turner', 'ria25@gmail.com', 'Tester');
+let manager = new Manager('Smith Paul', 'paul25@gmail.com', 'Manager');
 
-let emps = [developer, tester];
+let emps = [developer, tester, manager];
+manager.removeEmployee(tester);
 
-//console.log(developer);
+console.log(emps);
 //console.log(tester);
 
-developer.signin().updateTotal().updateTotal().signout();
+//developer.signin().updateTotal().updateTotal().signout();
 //tester.signout();
