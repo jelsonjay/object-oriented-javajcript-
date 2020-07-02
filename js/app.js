@@ -7,14 +7,23 @@ class Employees {
 		this.total = 0;
 	}
 	signin() {
-		console.log(this.email, 'login now!');
+		console.log(this.email, 'sign in now!');
+		return this;
 	}
 	signout() {
-		console.log(this.email, 'im loged out!');
+		console.log(this.email, 'im sign out!');
+		return this;
 	}
 	updateTotal() {
 		this.total++;
 		console.log(this.email, 'the total is', this.total);
+		return this;
+	}
+}
+
+class Manager extends Employees {
+	removeEmployee(emp) {
+		emps = emps.filter();
 	}
 }
 
@@ -22,8 +31,10 @@ class Employees {
 let developer = new Employees('Andre', 'andre@gmail.com', 'Developer');
 let tester = new Employees('Ria Turner', 'ria25@gmail.com', 'Tester');
 
+let emps = [developer, tester];
+
 //console.log(developer);
 //console.log(tester);
 
-//developer.signin();
+developer.signin().updateTotal().updateTotal().signout();
 //tester.signout();
