@@ -30,11 +30,18 @@ class Manager extends Employees {
 }
 
 // create new object
-let developer = new Employees('Andre', 'andre@gmail.com', 'Developer');
-let tester = new Employees('Ria Turner', 'ria25@gmail.com', 'Tester');
+let developer = new Employees('Andre Manuel', 'andre@gmail.com', 'Developer');
+let tester = new Employees('Steve Turner', 'steve25@gmail.com', 'QA Tester');
+let web_design = new Employees('Tom Jackson', 'ria25@gmail.com', 'Web Design');
+let marketing = new Employees('Sara Tyson', 'sara19@gmail.com', 'Marketing');
+let juniorDev = new Employees(
+	'James Ryan',
+	'james@gmail.com',
+	'Junior Developer'
+);
 let manager = new Manager('Smith Paul', 'paul25@gmail.com', 'Manager');
 
-let emps = [developer, tester, manager];
+let emps = [developer, tester, web_design, marketing, juniorDev, manager];
 manager.removeEmployee(developer);
 
 console.log(emps);
